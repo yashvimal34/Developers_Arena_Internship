@@ -237,4 +237,4 @@ Complete this checklist before submitting:
 
 This project demonstrates fundamental HTML5 document structure, semantic page organisation, internal navigation, images and alternative text, lists, links, and basic form validation. The documentation describes the project objectives, setup, code structure, HTML concepts, requirement mapping, screenshot procedure, testing, and limitations.
 
-![alt text](image.png)
+![alt text](images/image.png)
