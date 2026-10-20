@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Personal Portfolio Website
 
 This repository contains two versions of a personal portfolio website created as part of a web development internship.
@@ -28,6 +27,3 @@ The Week 2 page loads its styles from `Week2_add_CSS/style.css`. No package inst
 
 - The contact form currently uses a placeholder email address in its `mailto:` action. Replace it with the intended address before using the form.
 - The portfolio content includes learning and planned-project descriptions; update those details as the portfolio evolves.
-=======
-
->>>>>>> eafb94eeafa5820c977320c022e14fc66e8eb18e
