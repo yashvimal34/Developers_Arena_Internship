@@ -1,0 +1,476 @@
+/* =========================================
+   Yash Vimal | Personal Portfolio
+   Styles for the existing HTML structure
+   ========================================= */
+
+/* 1. Theme and global styles */
+:root {
+  --page-bg: #f7f8fc;
+  --surface: #ffffff;
+  --text: #172033;
+  --muted: #667085;
+  --primary: #5b5ce2;
+  --primary-hover: #4546c5;
+  --border: #e4e7ef;
+  --soft-lavender: #efeffb;
+  --dark-surface: #171c30;
+  --dark-card: #222943;
+  --radius: 16px;
+  --shadow: 0 16px 42px rgba(28, 35, 68, 0.09);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  max-width: 100%;
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  color: var(--text);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+h1 {
+  margin-bottom: 12px;
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  font-weight: 800;
+}
+
+h2 {
+  margin-bottom: 18px;
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+p {
+  margin-top: 0;
+  color: var(--muted);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 180ms ease, background-color 180ms ease,
+    border-color 180ms ease, transform 180ms ease;
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(91, 92, 226, 0.35);
+  outline-offset: 3px;
+}
+
+hr {
+  width: min(1120px, calc(100% - 48px));
+  height: 1px;
+  margin: 0 auto;
+  border: 0;
+  background: var(--border);
+}
+
+/* 2. Header and navigation */
+header#home {
+  position: relative;
+  overflow: hidden;
+  padding: 58px 24px 30px;
+  background:
+    radial-gradient(circle at 82% 15%, rgba(174, 174, 255, 0.24), transparent 28%),
+    linear-gradient(135deg, #ffffff 0%, #f0efff 100%);
+  text-align: center;
+}
+
+header#home h1 {
+  margin-bottom: 8px;
+}
+
+header#home > p {
+  margin-bottom: 28px;
+  color: #5c6478;
+  font-size: 1.1rem;
+}
+
+nav[aria-label="Main navigation"] ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav[aria-label="Main navigation"] a {
+  display: inline-block;
+  padding: 9px 17px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: #424b60;
+  font-size: 0.94rem;
+  font-weight: 700;
+}
+
+nav[aria-label="Main navigation"] a:hover {
+  transform: translateY(-2px);
+  border-color: #d7d6fb;
+  background: #ffffff;
+  color: var(--primary);
+  box-shadow: 0 6px 18px rgba(28, 35, 68, 0.07);
+}
+
+header#home hr {
+  margin-top: 30px;
+  background: transparent;
+}
+
+/* 3. Main content and sections */
+main {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+main > section {
+  padding: 76px clamp(0px, 3vw, 28px);
+  scroll-margin-top: 24px;
+}
+
+main > hr {
+  width: 100%;
+}
+
+main > section:nth-of-type(even) {
+  border-radius: var(--radius);
+  background: var(--soft-lavender);
+}
+
+main > section > p {
+  max-width: 780px;
+}
+
+section h2 {
+  position: relative;
+}
+
+section h2::after {
+  width: 48px;
+  height: 4px;
+  display: block;
+  margin-top: 14px;
+  border-radius: 4px;
+  background: var(--primary);
+  content: "";
+}
+
+/* 4. About section and profile image */
+#about img {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 22px 0;
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+  background: #e7e7ff;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+#about p {
+  max-width: 820px;
+  font-size: 1.02rem;
+}
+
+/* 5. Skills list */
+#skills ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+#skills li {
+  position: relative;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 18px 20px 18px 48px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  color: #424b60;
+  font-weight: 600;
+  transition: transform 180ms ease, border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+#skills li::before {
+  position: absolute;
+  left: 19px;
+  color: var(--primary);
+  font-size: 1.1rem;
+  font-weight: 800;
+  content: "✓";
+}
+
+#skills li:hover {
+  transform: translateY(-3px);
+  border-color: #c9c8fa;
+  box-shadow: var(--shadow);
+}
+
+/* 6. Projects */
+#projects article {
+  margin: 18px 0;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 5px 18px rgba(28, 35, 68, 0.035);
+  transition: transform 180ms ease, border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+#projects article:hover {
+  transform: translateY(-3px);
+  border-color: #c9c8fa;
+  box-shadow: var(--shadow);
+}
+
+#projects article h3 {
+  margin-bottom: 8px;
+  color: var(--primary-hover);
+}
+
+#projects article p {
+  margin-bottom: 0;
+}
+
+#projects > p:last-child {
+  margin-top: 28px;
+  padding: 18px 20px;
+  border-left: 4px solid var(--primary);
+  border-radius: 0 10px 10px 0;
+  background: #efeffb;
+}
+
+#projects > p a {
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* 7. Contact form */
+#contact form {
+  max-width: 760px;
+  margin-top: 26px;
+  padding: clamp(20px, 4vw, 32px);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+#contact form p {
+  margin-bottom: 18px;
+}
+
+#contact label {
+  display: inline-block;
+  margin-bottom: 7px;
+  color: #343d52;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  display: block;
+  margin-top: 7px;
+  padding: 12px 14px;
+  border: 1px solid #d9deea;
+  border-radius: 9px;
+  background: #fbfbfe;
+  color: var(--text);
+  font: inherit;
+  transition: border-color 180ms ease, box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(91, 92, 226, 0.1);
+}
+
+#contact textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+#contact button {
+  min-height: 46px;
+  margin: 4px 8px 4px 0;
+  padding: 11px 19px;
+  border: 1px solid var(--primary);
+  border-radius: 9px;
+  background: var(--primary);
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 180ms ease, background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+#contact button:hover {
+  transform: translateY(-2px);
+  background: var(--primary-hover);
+  box-shadow: 0 8px 18px rgba(91, 92, 226, 0.22);
+}
+
+#contact button[type="reset"] {
+  border-color: var(--border);
+  background: #ffffff;
+  color: #424b60;
+}
+
+#contact button[type="reset"]:hover {
+  border-color: #c9c8fa;
+  background: var(--soft-lavender);
+  box-shadow: none;
+}
+
+/* 8. Footer */
+footer {
+  margin-top: 30px;
+  padding: 30px 24px;
+  background: #171c30;
+  color: #ffffff;
+  text-align: center;
+}
+
+footer p {
+  margin: 4px 0;
+  color: #c2c7d8;
+  font-size: 0.9rem;
+}
+
+footer a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #b9baff;
+  font-weight: 700;
+}
+
+footer a:hover {
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* 9. Responsive design */
+@media (max-width: 700px) {
+  header#home {
+    padding: 44px 16px 24px;
+  }
+
+  main {
+    width: min(100% - 28px, 1120px);
+  }
+
+  main > section {
+    padding: 54px 6px;
+  }
+
+  #skills ul {
+    grid-template-columns: 1fr;
+  }
+
+  #projects article {
+    padding: 20px;
+  }
+
+  #contact form {
+    padding: 20px;
+  }
+
+  hr {
+    width: calc(100% - 28px);
+  }
+}
+
+@media (max-width: 420px) {
+  body {
+    font-size: 15px;
+  }
+
+  header#home h1 {
+    font-size: 2.5rem;
+  }
+
+  nav[aria-label="Main navigation"] ul {
+    gap: 4px;
+  }
+
+  nav[aria-label="Main navigation"] a {
+    padding: 8px 11px;
+    font-size: 0.87rem;
+  }
+
+  main > section {
+    padding-block: 44px;
+  }
+
+  #about img {
+    width: 130px;
+    height: 130px;
+  }
+
+  #contact button {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
