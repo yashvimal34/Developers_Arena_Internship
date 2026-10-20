@@ -1,240 +1,29 @@
-# Personal Portfolio Website Documentation
-**Student:** Yash Vimal  
-**Project:** Personal Portfolio Website  
-**Technology:** HTML5 only  
-**Project type:** Week 1 HTML assignment
+# Personal Portfolio Website
 
----
+This repository contains two versions of a personal portfolio website created as part of a web development internship.
 
-## 1. Project Overview
+## Work completed
 
-The Personal Portfolio Website introduces Yash Vimal and presents his background, skills, projects, and contact information in one place. The page is organised into separate sections so visitors can navigate directly to the information they need.
+- **Week 1 — HTML5:** Built a portfolio page with semantic HTML sections for an introduction, skills, projects, and contact information. Added in-page navigation, a profile photo, and a contact form with browser validation.
+- **Week 2 — CSS:** Added a separate stylesheet to the portfolio, with a consistent color palette, typography, page layout, styled skills and project cards, and a more polished contact form.
 
-This version uses **HTML only**. It does not use CSS for styling or JavaScript for interactivity. The browser displays the page using its default HTML styles.
+Both versions include a header and footer, and can be opened directly in a web browser.
 
-## 2. Project Objectives
+## Project versions
 
-The main objectives are to:
+| Folder | Contents |
+| --- | --- |
+| `Week!_HTML5/` | HTML5 portfolio and project documentation |
+| `Week2_add_CSS/` | Portfolio HTML, CSS stylesheet, and profile image |
 
-1. Practise the basic structure of an HTML5 document.
-2. Use headings and paragraphs to organise information.
-3. Create navigation links that jump to sections on the same page.
-4. Use semantic HTML elements such as `header`, `nav`, `main`, `section`, `article`, and `footer`.
-5. Display a profile image with meaningful alternative text.
-6. Present skills in an unordered list.
-7. Display project information using articles.
-8. Create a contact form with labels and built-in browser validation.
-9. Document the project, code structure, setup, and testing.
+## Run locally
 
-## 3. Project Folder Structure
+1. Open either `Week!_HTML5/index.html` or `Week2_add_CSS/index.html` in a web browser.
+2. Use the navigation links to jump to each portfolio section.
 
-Use this structure for the project:
+The Week 2 page loads its styles from `Week2_add_CSS/style.css`. No package installation or build step is required.
 
-```text
-personal-portfolio/
-├── index.html
-├── README.md
-├── images/
-│   └── yash.jpeg
-└── screenshots/
-    ├── portfolio-top.png
-    └── portfolio-contact.png
-```
+## Notes
 
-### What each file or folder is for
-
-- **`index.html`**: Contains the complete portfolio page and all HTML elements.
-- **`README.md`**: This documentation file. It explains the project and how to run and test it.
-- **`images/yash.jpeg`**: Yash's profile image. Make sure the file exists and that the filename and extension match the `src` in the HTML.
-- **`screenshots/`**: Holds screenshots captured from the running page. The screenshot names above are examples; add your actual screenshots after testing.
-
-If you do not have screenshots yet, create the `screenshots` folder after opening the page in a browser and capturing them. Do not use sample or edited images as proof of a working application.
-
-## 4. Setup and Installation Instructions
-
-### Requirements
-
-- A computer with a web browser, such as Chrome, Edge, or Firefox.
-- Visual Studio Code (VS Code), or another text editor.
-
-### Steps
-
-1. Create a folder named `personal-portfolio`.
-2. Inside it, create a file named `index.html`.
-3. Paste your portfolio HTML code into `index.html`.
-4. Create an `images` folder inside `personal-portfolio`.
-5. Put your photo in the `images` folder and name it `yash.jpeg`. If your photo has a different filename or extension, update the `src` attribute in the HTML to match.
-6. Save the files.
-7. Open `index.html` in your browser. Alternatively, open the folder in VS Code and use the Live Server extension if it is installed.
-8. Click each navigation link and test the contact form.
-9. Capture screenshots of the page and save them in the `screenshots` folder.
-
-No package installation, build command, CSS file, or JavaScript file is required.
-
-## 5. Website Sections Explained
-
-### 5.1 Header
-
-The `header` contains the name **Yash Vimal**, the role description, and the main navigation. The `id="home"` attribute gives the page a destination for the Back to top link.
-
-### 5.2 Navigation
-
-The `nav` element contains links to the About, Skills, Projects, and Contact sections.
-
-For example:
-
-```html
-<a href="#about">About</a>
-```
-
-The `#about` value points to the element whose ID is `about`:
-
-```html
-<section id="about">
-```
-
-The ID in the link and the ID on the section must match exactly.
-
-### 5.3 About Me
-
-The About section introduces Yash and describes his education and interest in web development. The `h2` element provides the section heading, while `p` elements contain the introduction.
-
-The profile image is referenced with:
-
-```html
-<img src="images/yash.jpeg"
-     alt="Portrait of Yash Vimal"
-     width="150"
-     height="150">
-```
-
-Use meaningful alternative text if the image conveys information. If the image is purely decorative, an empty `alt=""` can be appropriate. The image file must exist at the specified path or the browser will show a broken image.
-
-### 5.4 Skills
-
-The Skills section uses an unordered list (`ul`) and list items (`li`) to present the technologies being practised:
-
-- HTML5
-- CSS
-- JavaScript
-- React
-- Node.js and Express
-- MongoDB
-
-An unordered list is suitable because the skills do not need to be shown in a particular numerical order.
-
-### 5.5 Projects
-
-The Projects section contains separate `article` elements for the portfolio, CRUD API practice, and a future project.
-
-An `article` is a semantic element for a self-contained piece of content. Replace example descriptions with accurate information about projects you have actually built. Remove the “Future Project” entry once you have a real project to show, or keep it clearly labelled as planned work.
-
-The GitHub link currently points to the general GitHub website. Replace it with your own profile URL when available.
-
-### 5.6 Contact Form
-
-The form contains fields for name, email address, subject, and message. Each field has a `label` associated with its input through matching `for` and `id` values.
-
-Examples of validation attributes:
-
-- `required`: the field must be completed.
-- `type="email"`: the browser checks that the value resembles an email address.
-- `minlength="2"`: requires at least two characters in the name field.
-- `minlength="10"`: requires at least ten characters in the message field.
-
-The form currently uses a `mailto:` action. Depending on the visitor's device and browser, submitting the form may open an email application. This does **not** automatically store form entries in a database or guarantee that a message is delivered. Automatic collection requires a backend or a form service, which is outside the scope of this HTML-only assignment.
-
-Before using the form, replace `your.email@example.com` with the email address you want to receive messages at.
-
-### 5.7 Footer
-
-The footer displays the copyright line and a Back to top link. The link uses `href="#home"`, which points to the header's `id="home"`.
-
-## 6. HTML Concepts Learned
-
-| HTML concept | How it is used in this project |
-|---|---|
-| `<!DOCTYPE html>` | Declares that the document uses HTML5. |
-| `<html lang="en">` | Sets the document language to English. |
-| `<head>` | Holds metadata, title, and description that are not the main page content. |
-| `<meta charset="UTF-8">` | Supports a broad range of text characters. |
-| Viewport metadata | Helps the browser set the page's layout viewport on mobile devices. It does not add responsive styling by itself. |
-| `<title>` | Sets the browser tab title. |
-| `<body>` | Contains the page content displayed by the browser. |
-| Headings (`h1`, `h2`, `h3`) | Create a clear content hierarchy. |
-| `<p>` | Displays paragraphs of text. |
-| `<a>` and `href` | Create internal and external links. |
-| `id` | Gives an element a unique identifier, used by internal navigation. |
-| `<ul>` and `<li>` | Present navigation items and skills as lists. |
-| Semantic elements | Explain the purpose of the header, navigation, main content, sections, articles, and footer. |
-| `<img>`, `src`, and `alt` | Display the profile image, identify its file path, and provide alternative text. |
-| `<form>` | Groups the contact form fields. |
-| `<label>` | Gives each form field an accessible text label. |
-| `<input>` and `type` | Collect text and email values. |
-| `<textarea>` | Collects a longer message. |
-| `<button>` | Submits or resets the form. |
-| `required` and `minlength` | Add basic browser-side form validation. |
-| `target="_blank"` | Opens the external GitHub link in a new tab. |
-| `rel="noopener noreferrer"` | Adds a security/privacy safeguard for a link opened in a new tab. |
-| `&copy;` | Displays the copyright symbol. |
-| `<hr>` | Separates major content blocks with a thematic break. |
-
-## 7. How the Technical Requirements Are Met
-
-1. **HTML5 document structure:** `index.html` includes the doctype, language declaration, head, metadata, title, and body.
-2. **At least three sections:** About, Skills, Projects, and Contact are present.
-3. **Semantic HTML:** The page uses `header`, `nav`, `main`, `section`, `article`, and `footer`.
-4. **Contact form:** Name, email, subject, and message fields are included.
-5. **Image and alternative text:** A profile image is referenced in the About section. Confirm the image path and use suitable `alt` text.
-6. **Internal navigation:** The menu links point to the matching section IDs.
-7. **Form validation:** Required fields, email input type, and minimum-length attributes provide basic validation in supporting browsers.
-8. **HTML-only implementation:** The project does not require CSS or JavaScript files.
-
-## 8. Screenshots of the Working Application
-
-The assignment asks for screenshots of the working application. Capture these yourself after opening `index.html` in a browser:
-
-### Screenshot 1: Top of the portfolio
-1. Open `index.html` in Chrome or another browser.
-2. Set the page to a readable zoom level.
-3. Show the name, navigation, About section, and Skills heading if possible.
-4. Take a screenshot.
-5. Save it as `screenshots/portfolio-top.png`.
-
-### Screenshot 2: Projects and contact form
-1. Scroll down to the Projects and Contact sections.
-2. Make sure the project descriptions and contact form fields are visible.
-3. Take a screenshot.
-4. Save it as `screenshots/portfolio-contact.png`.
-
-### Screenshot 3: Form validation (optional but useful)
-1. Leave a required field empty.
-2. Click **Send Message**.
-3. Capture the browser's validation prompt if it appears.
-4. Save it as `screenshots/form-validation.png`.
-
-Add the actual screenshot files to the `screenshots/` folder and include them when submitting the project. Screenshots are not embedded in this documentation because they must reflect the page running on your own computer.
-
-## 9. Testing Checklist
-
-Complete this checklist before submitting:
-
-- [ ] `index.html` opens in the browser.
-- [ ] The browser tab shows “Yash Vimal | Personal Portfolio”.
-- [ ] The profile image loads correctly.
-- [ ] About navigation jumps to About Me.
-- [ ] Skills navigation jumps to My Skills.
-- [ ] Projects navigation jumps to My Projects.
-- [ ] Contact navigation jumps to Contact Me.
-- [ ] Required fields cannot be submitted empty in the browser.
-- [ ] An invalid email value triggers browser validation.
-- [ ] The email address in the `mailto:` action has been updated.
-- [ ] The GitHub link points to the correct profile.
-- [ ] Screenshots of the running application have been added.
-- [ ] All personal details and project descriptions are accurate.
-
-## 10. Conclusion
-
-This project demonstrates fundamental HTML5 document structure, semantic page organisation, internal navigation, images and alternative text, lists, links, and basic form validation. The documentation describes the project objectives, setup, code structure, HTML concepts, requirement mapping, screenshot procedure, testing, and limitations.
-
-![alt text](image.png)
+- The contact form currently uses a placeholder email address in its `mailto:` action. Replace it with the intended address before using the form.
+- The portfolio content includes learning and planned-project descriptions; update those details as the portfolio evolves.
