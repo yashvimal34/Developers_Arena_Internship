@@ -1,0 +1,79 @@
+WEEK 3: JAVASCRIPT PORTFOLIO FEATURES
+
+This document explains the JavaScript features added to the portfolio website.
+The JavaScript is written in script.js and connected to the page by the script
+element near the end of index.html. The styles for the added controls are in
+style.css.
+
+1. Selecting page elements
+
+JavaScript uses document.querySelector() to find the header, projects section,
+and contact form. It also uses querySelectorAll() to find the project cards and
+the form fields. Once these elements are selected, JavaScript can respond to
+user actions and update the page.
+
+2. Dark mode
+
+A "Dark mode" button is created with JavaScript and added to the header. When
+the button is clicked, the dark-mode class is added to or removed from the
+body. The button text changes to show the other mode that can be selected.
+CSS uses this class to change the page colors.
+
+The selected mode is saved in the browser's local storage under the name
+"portfolioTheme". When the page is opened again, JavaScript checks this saved
+value and restores dark mode if it was selected previously. A try/catch is used
+because the browser may block access to local storage.
+
+3. Project search and hover
+
+A search box is added above the project cards. Each time the user types,
+JavaScript checks whether the search text appears in each card's text. The
+comparison ignores capital letters, and cards that do not match are hidden.
+A message shows how many projects match.
+
+When the pointer moves over a project card, the card gets a CSS class and a
+message shows the project's title. When the pointer leaves, the class is
+removed and the search results are shown again.
+
+4. Contact form validation
+
+JavaScript selects the name, email, subject, and message fields. It creates an
+empty error message below each field. The showFieldError() function checks one
+field and displays a helpful message when it is invalid:
+
+- All fields must contain a value.
+- The name must have at least 2 characters.
+- The email must be in a valid email format.
+- The message must have at least 10 characters.
+
+The trim() method removes spaces at the beginning and end before checking
+whether a field is empty or long enough. The email field also uses the
+browser's built-in validity check.
+
+The input event runs validation as the user types. When the form is submitted,
+JavaScript checks every field. If any field is invalid, it prevents the form
+from being submitted and asks the user to correct the errors. If all fields
+are valid, it displays a confirmation message. The Clear Form button removes
+the error messages and resets the validation state.
+
+The form uses a mailto action in index.html. Therefore, a valid submission
+hands the message to the user's configured email application; this website
+does not send or store messages on a server.
+
+5. JavaScript and CSS working together
+
+JavaScript handles page behavior by adding elements, listening for events,
+checking values, and changing text or CSS classes. The stylesheet controls how
+the added controls, validation errors, dark mode, and project hover effect
+look.
+
+6. How to try the features
+
+1. Open index.html in a browser.
+2. Select the Dark mode button, reload the page, and check that the choice is
+   remembered.
+3. Type "CRUD" in the project search box and check that matching projects
+   remain visible.
+4. Move the pointer over a project card to see its title message.
+5. Submit the contact form while fields are empty to see validation errors.
+6. Enter valid details, then use Clear Form to clear the form.

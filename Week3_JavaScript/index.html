@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal portfolio website with information, skills, projects, and contact details.">
+  <title>Yash Vimal | Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="home">
+    <h1>Yash Vimal</h1>
+    <p>Aspiring Web Developer | MCA Student</p>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+
+        <img src="images/yash.jpeg" alt="" width="150" height="150">
+
+      <p>Hello! My name is Yash Vimal I am an MCA student and an aspiring web developer. I have completed my BCA and am learning to build useful websites and web applications.</p>
+      <p>I enjoy practising HTML, CSS, JavaScript, React, and Node.js. My goal is to improve my programming skills by building practical projects.</p>
+    </section>
+
+    <hr>
+
+    <section id="skills">
+      <h2>My Skills</h2>
+      <p>Here are some technologies I am learning and practising:</p>
+      <ul>
+        <li>HTML5: webpage structure and semantic elements</li>
+        <li>CSS: styling and page layouts</li>
+        <li>JavaScript: interactive webpage functionality</li>
+        <li>React: user interface development</li>
+        <li>Node.js and Express: backend development basics</li>
+        <li>MongoDB: database basics</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section id="projects">
+      <h2>My Projects</h2>
+
+      <article>
+        <h3>Personal Portfolio Website</h3>
+        <p>A website introducing me, listing my skills, and providing contact information. This project is built with HTML only.</p>
+      </article>
+
+      <article>
+        <h3>CRUD API Practice</h3>
+        <p>A learning project for practising API routes and database operations with Node.js, Express, and MongoDB.</p>
+      </article>
+
+      <article>
+        <h3>Future Project</h3>
+        <p>I will add more projects here as I continue learning and building.</p>
+      </article>
+
+      <p>Visit my <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub profile</a> to share your code projects here. Replace this link with your own profile URL.</p>
+    </section>
+
+    <hr>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>Use this form to prepare a message or ask me about a project or opportunity.</p>
+
+      <form action="mailto:your.email@example.com" method="post" enctype="text/plain">
+        <p>
+          <label for="name">Full Name:</label><br>
+          <input type="text" id="name" name="name" minlength="2" required>
+        </p>
+
+        <p>
+          <label for="email">Email Address:</label><br>
+          <input type="email" id="email" name="email" required>
+        </p>
+
+        <p>
+          <label for="subject">Subject:</label><br>
+          <input type="text" id="subject" name="subject" required>
+        </p>
+
+        <p>
+          <label for="message">Your Message:</label><br>
+          <textarea id="message" name="message" rows="6" cols="35" minlength="10" required></textarea>
+        </p>
+
+        <button type="submit">Send Message</button>
+        <button type="reset">Clear Form</button>
+      </form>
+    </section>
+  </main>
+
+  <hr>
+
+  <footer>
+    <p>&copy; 2026 Yash Vimal. All rights reserved.</p>
+    <p><a href="#home">Back to top</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
