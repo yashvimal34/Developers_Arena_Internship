@@ -1,0 +1,185 @@
+Saffron & Stone Restaurant Website - Project Documentation
+
+Project Name:
+Saffron & Stone
+
+Project Type:
+A responsive, multi-page restaurant website built using HTML, CSS, and vanilla JavaScript.
+
+Goal:
+To create a complete restaurant landing experience with a modern visual style, menu browsing, story/about content, contact details, and a booking form for demo reservations.
+
+What We Built:
+We created a 4-page website for a fictional Indian restaurant:
+
+1. index.html
+   - Home page
+   - Hero section with restaurant branding and calls to action
+   - Feature story section
+   - Popular dishes/cards section
+   - Closing CTA to book a table
+   - Footer with location, contact, and hours
+
+2. menu.html
+   - Full menu page with different food categories
+   - Interactive tab switching for Small plates, Mains, Desserts, and Drinks
+   - Menu items with ingredients and pricing
+   - Vegetarian indicator and pricing in INR
+   - CTA button leading to reservation page
+
+3. about.html
+   - Restaurant story and brand concept
+   - Intro text explaining the restaurant’s philosophy
+   - Values section highlighting care, welcome, and discovery
+   - Visual storytelling using large imagery and clean layout
+
+4. contact.html
+   - Restaurant location and contact info
+   - Reservation and enquiry form
+   - Business address, phone number, email, and opening hours
+   - Booking form with validation for user inputs
+
+Technology Used:
+- HTML5 for structure and page content
+- CSS3 for styling and responsive layout
+- JavaScript for interactivity and form validation
+- Google Fonts for typography
+- Unsplash images for restaurant visuals
+
+Website Style and Design:
+The site uses a warm, premium restaurant aesthetic with earthy tones:
+- Olive green for the main brand color
+- Golden beige accents for elegance and highlights
+- Cream/ivory neutral backgrounds
+- Serif font for headings and uppercase editorial feel
+- Sans-serif font for readable body text and UI labels
+
+CSS features included:
+- Fixed top info bar with restaurant hours
+- Sticky header navigation
+- Responsive layout for desktop, tablet, and mobile viewers
+- Hero section overlays for readability
+- Card-based sections for featured dishes and menu items
+- Buttons, links, and call-to-action styling
+- Media queries for smaller screens
+- Reduced-motion-friendly design patterns
+
+Responsive Behavior:
+We designed the website so it adapts smoothly across different screen sizes.
+- Navigation collapses into a mobile menu button on smaller screens
+- Layouts shift from multi-column to single-column depending on device width
+- Card grids reflow for smaller viewports
+- Images scale correctly with object-fit and responsive dimensions
+- Text remains readable and sections stack cleanly for mobile users
+
+JavaScript Functionalities:
+The main.js file handles the interactive parts of the website.
+
+1. Dynamic year in footer
+   - Displays the current year automatically in every page footer
+
+2. Mobile menu toggle
+   - The menu icon opens/closes the navigation on smaller devices
+   - It updates aria-expanded and toggles the menu icon between ☰ and ×
+
+3. Menu category tabs
+   - Clicking a category button switches the visible menu section
+   - Only the selected food group is shown at a time
+   - Active tab styling changes visually
+
+4. Booking form validation
+   - Validates fields such as:
+     - name
+     - email
+     - phone number
+     - date
+     - time
+     - guests
+     - consent checkbox
+   - Uses custom rules for Indian phone number validation and email format
+   - Shows field-level error messages
+   - Prevents submission if validation fails
+   - Displays success or failure status after form attempt
+   - Resets the form when successful
+
+5. Minimum date restriction
+   - The booking date field does not allow past dates
+   - This helps keep the form realistic for reservations
+
+Project Structure:
+Week4-restaurant-website/
+├── index.html
+├── menu.html
+├── about.html
+├── contact.html
+├── README.md
+├── document.txt
+├── css/
+│   └── style.css
+├── js/
+│   └── main.js
+└── images/
+    ├── hero-food.jpg
+    ├── menu-ingredients.jpg
+    ├── about-restaurant.jpg
+    ├── restaurant-interior.jpg
+    └── other restaurant visuals
+
+Content Details:
+The website uses fictional restaurant content, including:
+- Restaurant name: Saffron & Stone
+- Address: 12, Garden Avenue, New Delhi, India
+- Phone: +91 98765 43210
+- Email: hello@saffronandstone.in
+- Opening hours: 12 PM to 11 PM daily
+
+This is demo content and not connected to a real business database.
+
+Accessibility Considerations:
+We included several helpful accessibility improvements such as:
+- Labels and form inputs with clear text
+- aria-label on the mobile menu button
+- aria-live for form status messages
+- Focusable buttons and links
+- Semantic HTML structure with proper page sections and headings
+- Visual contrast between text and background
+
+Form Behavior Notes:
+The contact booking form is a front-end demo. It validates input in-browser but does not send reservation data to a server or save it anywhere.
+
+This means:
+- It works for UI demonstration and validation purposes
+- It is not production-ready for real online bookings
+- A backend or form service would be required for real-world usage
+
+How to Run the Website:
+There are no complicated build steps required.
+
+Method 1:
+- Open index.html directly in a browser
+
+Method 2:
+- Use VS Code Live Server or any local static server
+
+No installation or package manager setup is needed because this is a static website.
+
+What Makes This Project Good:
+- It looks polished and modern
+- It demonstrates complete multi-page restaurant branding
+- It includes interactive UI behavior using plain JavaScript
+- It is easy to understand and extend
+- It is useful as a template for future restaurant or hospitality projects
+
+Possible Future Improvements:
+- Connect booking form to a real backend or email service
+- Add online ordering feature
+- Add gallery section
+- Add animations and scrolling effects
+- Add dark mode or theme switching
+- Make menu data dynamic via JSON or API
+- Add real reservation database integration
+
+Summary:
+We have successfully built a complete static restaurant website that includes a landing page, menu page, about page, contact page, responsive design, mobile navigation, tabbed menu, and a validated booking form. The site is polished, fully functional as a front-end demo, and ready for future enhancements or deployment as a static website.
+
+This project demonstrates a strong understanding of HTML, CSS, and JavaScript and serves as a practical example of a responsive modern restaurant web design.

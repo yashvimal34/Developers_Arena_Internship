@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Contact Saffron & Stone or request a table reservation.">
+    <title>Contact & Booking | Saffron & Stone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="topline">A LITTLE SPICE, A LOT OF SOUL <span>OPEN DAILY · 12 PM – 11 PM</span></div>
+    <header class="header">
+      <a class="logo" href="index.html"><b>S</b><span>SAFFRON <i>&</i> STONE<small>MODERN INDIAN KITCHEN</small></span></a><button class="toggle" aria-label="Toggle menu">☰</button>
+      <nav><a class="" href="index.html">Home</a><a class="" href="menu.html">Our Menu</a><a class="" href="about.html">Our Story</a><a class="active" href="contact.html">Contact</a><a class="button small" href="contact.html#booking">Book a table ↗</a></nav>
+    </header>
+    <section class="pagehero contacthero">
+      <div class="wrap">
+        <p class="eyebrow">GOOD FOOD. GOOD COMPANY.</p>
+        <h1>We'd love to<br><em>see you.</em></h1>
+        <p>Questions, celebrations or just a table for two. Get in touch.</p>
+      </div>
+    </section>
+    <main class="wrap contactgrid section">
+      <aside>
+        <p class="eyebrow">FIND YOUR WAY HERE</p>
+        <h2>Let's make<br><em>plans.</em></h2>
+        <h4>ADDRESS</h4>
+        <p>12, Garden Avenue<br>New Delhi, India 110001</p>
+        <h4>CALL OR EMAIL</h4>
+        <p><a href="tel:+919876543210">+91 98765 43210</a><br><a href="mailto:hello@saffronandstone.in">hello@saffronandstone.in</a></p>
+        <h4>OPENING HOURS</h4>
+        <p>Monday – Sunday<br>12 PM – 11 PM</p>
+        <div class="mapbox">SAFFRON & STONE<br><small>12, Garden Avenue · New Delhi</small></div>
+      </aside>
+      <section class="formcard" id="booking">
+        <p class="eyebrow">BOOK A TABLE / SEND A NOTE</p>
+        <h2>Let's get you <em>sorted.</em></h2>
+        <p>Fill in your details and our team will get back to you to confirm your reservation.</p>
+        <form id="booking-form" novalidate>
+          <label>Your name *<input name="name" id="name" required minlength="2" placeholder="e.g. Aditi Sharma"><small class="error"></small></label>
+          <div class="twocol">
+            <label>Email address *<input name="email" id="email" type="email" required placeholder="you@example.com"><small class="error"></small></label>
+            <label>Phone number *<input name="phone" id="phone" type="tel" required placeholder="10-digit mobile"><small class="error"></small></label>
+          </div>
+          <div class="twocol">
+            <label>Preferred date *<input name="date" id="date" type="date" required><small class="error"></small></label>
+            <label>Preferred time *<select name="time" id="time" required><option value="">Choose time</option><option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option><option>7:00 PM</option><option>8:00 PM</option><option>9:00 PM</option><option>10:00 PM</option></select><small class="error"></small></label>
+          </div>
+          <div class="twocol">
+            <label>Number of guests *<select name="guests" id="guests" required><option value="">Select guests</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7+</option></select><small class="error"></small></label>
+            <label>Enquiry type<select name="reason"><option>Table reservation</option><option>Private event</option><option>General enquiry</option></select></label>
+          </div>
+          <label>Anything else?<textarea name="message" rows="4" placeholder="Dietary needs, special occasion, or a question..."></textarea></label>
+          <label class="consent"><input type="checkbox" id="consent"> I agree to be contacted about this enquiry. *</label>
+          <small class="error consenterror"></small><button class="button" type="submit">Send enquiry ↗</button>
+          <p class="status" role="status" aria-live="polite"></p>
+          <p class="fineprint">Demo form only. It validates in your browser and does not send or save bookings.</p>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap foot">
+        <div>
+          <a class="logo footlogo" href="index.html"><b>S</b><span>SAFFRON <i>&</i> STONE<small>MODERN INDIAN KITCHEN</small></span></a>
+          <p>Good food tastes better together.</p>
+        </div>
+        <div>
+          <h4>EXPLORE</h4>
+          <a href="menu.html">Our menu</a><a href="about.html">Our story</a><a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>FIND US</h4>
+          <p>12, Garden Avenue<br>New Delhi, India</p>
+          <p>+91 98765 43210<br>hello@saffronandstone.in</p>
+        </div>
+        <div>
+          <h4>OPENING HOURS</h4>
+          <p>Monday – Sunday<br>12 PM – 11 PM</p>
+        </div>
+      </div>
+      <div class="wrap copyright">© <span id="year"></span> Saffron & Stone · Demo restaurant website</div>
+    </footer>
+  </body>
+</html>
