@@ -27,8 +27,13 @@ restaurant-website/
 ├── css/style.css
 ├── js/main.js
 ├── images/
+├── screenshots/
+├── document.txt
 └── README.md
 ```
+
+## Full documentation and screenshots
+See [`document.txt`](document.txt) for the project overview and objectives, design decisions, setup instructions, code structure, feature and technical-requirement coverage, test checklist, screenshots, limitations, and deployment process. Rendered screenshots of all four pages are in `screenshots/`.
 
 ## Run locally
 No build tools are required. Open `index.html` in a browser or use VS Code Live Server.

@@ -183,3 +183,174 @@ Summary:
 We have successfully built a complete static restaurant website that includes a landing page, menu page, about page, contact page, responsive design, mobile navigation, tabbed menu, and a validated booking form. The site is polished, fully functional as a front-end demo, and ready for future enhancements or deployment as a static website.
 
 This project demonstrates a strong understanding of HTML, CSS, and JavaScript and serves as a practical example of a responsive modern restaurant web design.
+
+REQUIRED PROJECT DOCUMENTATION
+==============================
+
+This section explicitly covers the project documentation requirements: project
+overview and objectives, setup and installation, code structure, screenshots of
+the working application, technical requirement coverage, design decisions,
+implemented features, and deployment process.
+
+1. PROJECT OVERVIEW AND OBJECTIVES
+----------------------------------
+
+Saffron & Stone is a fictional modern Indian restaurant represented by a
+responsive, multi-page static website. The project objective is to provide a
+cohesive restaurant experience where visitors can discover the restaurant,
+browse a sample menu, read its story, find contact details, and submit a
+reservation enquiry for demonstration.
+
+The site has four pages: Home (index.html), Our Menu (menu.html), Our Story
+(about.html), and Contact & Booking (contact.html). Page navigation, calls to
+action, and the footer connect these visitor journeys. Restaurant information,
+menu items, prices, contact details, and booking responses are fictional demo
+content, not live business data.
+
+2. DESIGN DECISIONS
+-------------------
+
+- Visual direction: warm, editorial, premium, and welcoming, inspired by a
+  contemporary Indian restaurant.
+- Palette: olive green for brand elements, muted gold for accents, cream/ivory
+  for light surfaces, and dark ink for contrast.
+- Typography: Playfair Display serif headings paired with DM Sans body text.
+  Google Fonts are loaded online; Georgia and Arial are CSS fallbacks.
+- Photography: local JPG images supply the hero and story backgrounds; selected
+  home-page dish cards use Unsplash URLs. Those remote card images require an
+  internet connection.
+- Layout: a consistent header, page-specific hero, reusable content sections,
+  and footer keep the four pages visually related. Grids become stacked
+  layouts on smaller screens.
+- Interaction: plain JavaScript provides the mobile navigation, menu tabs,
+  current footer year, and client-side booking validation without a framework
+  or server.
+
+3. FEATURES IMPLEMENTED
+-----------------------
+
+- Home page with restaurant introduction, story and menu links, featured dish
+  cards, and booking calls to action.
+- Menu page with Small plates, Mains, Desserts, and Drinks tabs, sample INR
+  prices, and vegetarian markers.
+- Story page with restaurant concept and three values: cook with care, welcome
+  everyone, and keep discovering.
+- Contact page with demo address, phone, email, opening hours, and an enquiry
+  form.
+- Mobile navigation that opens and closes, updates aria-expanded, and closes
+  after a navigation link is selected.
+- Booking form checks for a two-character minimum name, email format, 10-digit
+  Indian mobile number, today-or-future date, selected time, guest count, and
+  consent. It displays field errors and a polite status message; a valid
+  submission shows demo confirmation and resets the form.
+- Responsive page layouts, semantic HTML, image alternative text, form labels,
+  visible validation feedback, aria-live status, and reduced-motion CSS.
+
+4. SETUP AND INSTALLATION
+-------------------------
+
+Requirements: a modern web browser. Node.js, a package manager, a build step,
+and server-side services are not required.
+
+1. Place or clone the project folder on your computer.
+2. Open index.html directly in a modern browser, or open the folder in Visual
+   Studio Code and run it using the Live Server extension (or another static
+   file server).
+3. Use the site navigation to check all four pages. Try the menu category tabs,
+   mobile navigation at a narrow viewport, and the contact form.
+
+An internet connection is needed for Google Fonts and the remote Unsplash
+images. Local hero and story images are in images/.
+
+5. CODE STRUCTURE
+-----------------
+
+index.html       Home page
+menu.html        Menu and category tab content
+about.html       Restaurant story and values
+contact.html     Contact information and booking enquiry form
+css/style.css    Colors, typography, layouts, components, breakpoints,
+                 and reduced-motion rules
+js/main.js       Footer year, mobile navigation, menu tabs, and form logic
+images/          Local JPG photography and image notes
+screenshots/     Required application screenshot evidence (see section 6)
+README.md        Quick-start, features, image, booking, and deployment notes
+document.txt     Full project documentation
+
+6. SCREENSHOTS OF THE WORKING APPLICATION
+-----------------------------------------
+
+Screenshot evidence is an explicit project deliverable. Save current,
+unmodified browser screenshots of the working pages as PNG files in the
+screenshots/ folder, using these names:
+
+- screenshots/home.png — Home page
+- screenshots/menu.png — Menu page
+- screenshots/about.png — Our Story page
+- screenshots/contact.png — Contact and booking page
+
+Capture at a desktop viewport; additionally check the mobile layout in the
+browser. Screenshots should show the actual rendered application, not mockups.
+Refresh the screenshots after changing page design or content. The screenshots
+are evidence of the rendered UI and do not replace testing the interactions.
+
+7. TECHNICAL REQUIREMENTS AND HOW THEY ARE MET
+----------------------------------------------
+
+- Multi-page website: four standalone HTML pages share consistent site
+  navigation and CSS.
+- Semantic, accessible page structure: HTML5 landmarks and headings are used;
+  fields have labels; images have alternative text; the mobile control has an
+  accessible label; form status uses role=status and aria-live.
+- Responsive behavior: CSS grid/flex layouts and breakpoints at 850px and
+  650px adapt content and navigation. Reduced-motion preferences are respected.
+- Interactivity without dependencies: vanilla JavaScript controls the mobile
+  menu, menu category switching, current year, and client-side form feedback.
+- Form validation: required booking fields are checked in the browser,
+  including Indian mobile format, date restriction, and consent. The form does
+  not transmit or persist submissions.
+- Static hosting: no compilation or build command is required; the project can
+  be served as static HTML, CSS, JavaScript, and image files.
+- External resources: Google Fonts and some home-page images are third-party
+  resources and require internet access; local JPGs are used for page hero
+  imagery.
+
+8. HOW TO TEST THE DOCUMENTED FEATURES
+--------------------------------------
+
+- Open every page and follow header, footer, and call-to-action links.
+- On menu.html, select each of the four category tabs and confirm the matching
+  items are shown.
+- At a viewport narrower than 650px, open and close the navigation and follow a
+  link.
+- On contact.html, submit an empty form to see validation errors; then try
+  invalid values and a valid set of values. Confirm past dates are unavailable.
+- Confirm the success response explicitly describes this as a demo request;
+  no reservation should be expected by email or stored by the site.
+- Check the pages at desktop and mobile widths and record screenshots as
+  described in section 6.
+
+9. DEPLOYMENT PROCESS
+---------------------
+
+The site is not currently deployed. To publish it on Render as a static site:
+
+1. Push the project files to a GitHub repository.
+2. In Render, create a Static Site and connect the repository.
+3. Set the publish directory to the directory containing index.html (the
+   repository root when it is this project folder).
+4. Leave the build command empty: this project has no build step.
+5. Deploy, then open the published URL and verify all four pages, local image
+   paths, menu tabs, mobile navigation, and form validation.
+
+The form remains a front-end demonstration after static deployment. To accept
+real bookings, connect it to a secure backend or a form service and replace all
+fictional restaurant information with verified business details.
+
+10. LIMITATIONS AND FUTURE WORK
+-------------------------------
+
+No backend, booking database, email delivery, online ordering, or live map is
+included. The contact form only validates and displays a local confirmation.
+Possible future work includes a reservation API, real business data, licensed
+optimized local copies of remote images, ordering, and a real map integration.
