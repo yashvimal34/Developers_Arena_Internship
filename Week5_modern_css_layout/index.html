@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yash Vimal is an MCA student and aspiring web developer building thoughtful web experiences.">
+  <meta name="theme-color" content="#f5f6fb">
+  <title>Yash Vimal | Web Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" id="home">
+    <div class="site-header__inner">
+      <a class="site-header__brand" href="#home" aria-label="Yash Vimal, home">
+        <span class="site-header__brand-mark" aria-hidden="true">YV</span>
+        <span>Yash Vimal<span class="site-header__brand-period">.</span></span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="site-nav__link" href="#about">About</a>
+        <a class="site-nav__link" href="#skills">Skills</a>
+        <a class="site-nav__link" href="#projects">Projects</a>
+        <a class="site-nav__link" href="#contact">Contact</a>
+      </nav>
+
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+        <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+        <span data-theme-label>Dark mode</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="portfolio" id="main-content">
+    <div class="portfolio__grid">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__content">
+          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span> MCA student · Aspiring web developer</p>
+          <h1 class="hero__title" id="hero-title">I build for the <span class="text-accent">web.</span></h1>
+          <p class="hero__intro">Hello, I’m Yash Vimal. I enjoy turning ideas into clear, useful digital experiences while growing my skills one project at a time.</p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
+            <a class="button button--quiet" href="#contact">Get in touch</a>
+          </div>
+          <div class="hero__note">
+            <span class="hero__note-line" aria-hidden="true"></span>
+            <span>Currently learning, always building.</span>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="A little about Yash">
+          <div class="hero-card__image-wrap">
+            <img class="hero-card__image" src="images/yash.jpeg" alt="Portrait of Yash Vimal" width="600" height="600">
+            <span class="hero-card__badge"><span aria-hidden="true">✦</span> Open to learning</span>
+          </div>
+          <div class="hero-card__caption">
+            <div>
+              <p class="hero-card__name">Yash Vimal</p>
+              <p class="hero-card__role">MCA Student · Web Developer</p>
+            </div>
+            <span class="hero-card__arrow" aria-hidden="true">↗</span>
+          </div>
+        </aside>
+        <span class="hero__decoration hero__decoration--one" aria-hidden="true"></span>
+        <span class="hero__decoration hero__decoration--two" aria-hidden="true"></span>
+      </section>
+
+      <section class="about panel" id="about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="section-heading__eyebrow">A bit about me</p>
+          <h2 class="section-heading__title" id="about-title">Curiosity meets code.</h2>
+        </div>
+        <div class="about__copy">
+          <p>I’m an MCA student and aspiring web developer. After completing my BCA, I started focusing on building useful websites and web applications.</p>
+          <p>I enjoy practising HTML, CSS, JavaScript, React, and Node.js. My goal is to keep improving through practical projects and thoughtful problem-solving.</p>
+        </div>
+        <div class="about__details">
+          <div class="about__detail">
+            <span class="about__detail-label">Education</span>
+            <span class="about__detail-value">MCA student · BCA graduate</span>
+          </div>
+          <div class="about__detail">
+            <span class="about__detail-label">Focus</span>
+            <span class="about__detail-value">Web development</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills panel panel--tinted" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <p class="section-heading__eyebrow">Tools I’m learning</p>
+          <h2 class="section-heading__title" id="skills-title">My skill set<span class="text-accent">.</span></h2>
+        </div>
+        <p class="skills__intro">A growing toolkit for building across the stack.</p>
+        <ul class="skills__list">
+          <li class="skill"><span class="skill__icon" aria-hidden="true">01</span><span class="skill__name">HTML5</span><span class="skill__type">Structure</span></li>
+          <li class="skill"><span class="skill__icon" aria-hidden="true">02</span><span class="skill__name">CSS</span><span class="skill__type">Styling</span></li>
+          <li class="skill"><span class="skill__icon" aria-hidden="true">03</span><span class="skill__name">JavaScript</span><span class="skill__type">Interaction</span></li>
+          <li class="skill"><span class="skill__icon" aria-hidden="true">04</span><span class="skill__name">React</span><span class="skill__type">Frontend</span></li>
+          <li class="skill"><span class="skill__icon" aria-hidden="true">05</span><span class="skill__name">Node.js &amp; Express</span><span class="skill__type">Backend basics</span></li>
+          <li class="skill"><span class="skill__icon" aria-hidden="true">06</span><span class="skill__name">MongoDB</span><span class="skill__type">Database basics</span></li>
+        </ul>
+      </section>
+
+      <section class="projects" id="projects" aria-labelledby="projects-title">
+        <div class="projects__top">
+          <div class="section-heading">
+            <p class="section-heading__eyebrow">Selected practice</p>
+            <h2 class="section-heading__title" id="projects-title">Things I’ve built<span class="text-accent">.</span></h2>
+          </div>
+          <label class="project-search">
+            <span class="project-search__icon" aria-hidden="true">⌕</span>
+            <span class="visually-hidden">Search projects</span>
+            <input class="project-search__input" type="search" data-project-search placeholder="Find a project" autocomplete="off">
+          </label>
+        </div>
+        <p class="projects__status" data-project-status aria-live="polite"></p>
+        <div class="projects__grid">
+          <article class="project-card">
+            <div class="project-card__topline">
+              <span class="project-card__number">01 / PORTFOLIO</span>
+              <span class="project-card__icon" aria-hidden="true">↗</span>
+            </div>
+            <h3 class="project-card__title">Personal portfolio</h3>
+            <p class="project-card__description">A responsive home for my introduction, growing skill set, project work, and contact details.</p>
+            <ul class="project-card__tags" aria-label="Technologies used">
+              <li>HTML</li><li>CSS Grid</li><li>JavaScript</li>
+            </ul>
+          </article>
+          <article class="project-card">
+            <div class="project-card__topline">
+              <span class="project-card__number">02 / API PRACTICE</span>
+              <span class="project-card__icon" aria-hidden="true">↗</span>
+            </div>
+            <h3 class="project-card__title">CRUD API practice</h3>
+            <p class="project-card__description">A learning project for practising API routes and database operations with Node.js, Express, and MongoDB.</p>
+            <ul class="project-card__tags" aria-label="Technologies used">
+              <li>Node.js</li><li>Express</li><li>MongoDB</li>
+            </ul>
+          </article>
+          <article class="project-card">
+            <div class="project-card__topline">
+              <span class="project-card__number">03 / IN PROGRESS</span>
+              <span class="project-card__icon" aria-hidden="true">↗</span>
+            </div>
+            <h3 class="project-card__title">More on the way</h3>
+            <p class="project-card__description">I’m continuing to learn and build. This space will grow as I take on new ideas and challenges.</p>
+            <ul class="project-card__tags" aria-label="Areas of interest">
+              <li>Learning</li><li>Building</li>
+            </ul>
+          </article>
+        </div>
+        <p class="projects__empty" data-project-empty hidden>No projects match that search. Try another keyword.</p>
+      </section>
+
+      <section class="contact panel panel--dark" id="contact" aria-labelledby="contact-title">
+        <div class="contact__intro">
+          <p class="section-heading__eyebrow">Have a question or idea?</p>
+          <h2 class="section-heading__title" id="contact-title">Let’s make something useful<span class="text-accent">.</span></h2>
+          <p class="contact__copy">I’m always glad to talk about web development, learning, and new opportunities.</p>
+          <p class="contact__availability"><span class="contact__availability-dot" aria-hidden="true"></span> Open to conversation</p>
+        </div>
+        <form class="contact-form" action="mailto:your.email@example.com" method="post" enctype="text/plain" data-contact-form>
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="name">Full name</label>
+            <input class="contact-form__input" type="text" id="name" name="name" minlength="2" autocomplete="name" required>
+            <span class="contact-form__error" id="name-error"></span>
+          </div>
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="email">Email address</label>
+            <input class="contact-form__input" type="email" id="email" name="email" autocomplete="email" required>
+            <span class="contact-form__error" id="email-error"></span>
+          </div>
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="subject">Subject</label>
+            <input class="contact-form__input" type="text" id="subject" name="subject" required>
+            <span class="contact-form__error" id="subject-error"></span>
+          </div>
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="message">Your message</label>
+            <textarea class="contact-form__input contact-form__input--textarea" id="message" name="message" rows="4" minlength="10" required></textarea>
+            <span class="contact-form__error" id="message-error"></span>
+          </div>
+          <div class="contact-form__actions">
+            <button class="button button--primary" type="submit">Prepare message <span aria-hidden="true">↗</span></button>
+            <button class="button button--outline" type="reset">Clear form</button>
+          </div>
+          <p class="contact-form__status" data-form-status aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p class="site-footer__copyright">&copy; 2026 Yash Vimal. Made with curiosity and CSS.</p>
+    <a class="site-footer__top" href="#home">Back to top <span aria-hidden="true">↑</span></a>
+  </footer>
+
+  <script src="js/theme-switcher.js" defer></script>
+</body>
+</html>

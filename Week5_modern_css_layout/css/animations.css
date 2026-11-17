@@ -1,0 +1,58 @@
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px) rotate(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(2deg);
+  }
+}
+
+.hero__content {
+  animation: rise-in 650ms 80ms both;
+}
+
+.hero-card {
+  animation: float-in 750ms 180ms both;
+}
+
+.hero__decoration--one {
+  animation: decoration-pulse 8s ease-in-out infinite alternate;
+}
+
+@keyframes decoration-pulse {
+  from {
+    opacity: 0.45;
+    transform: scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

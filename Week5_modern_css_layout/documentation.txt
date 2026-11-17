@@ -1,0 +1,43 @@
+ADVANCED PORTFOLIO — IMPLEMENTATION NOTES
+
+The portfolio uses the following submission structure:
+
+- index.html: semantic page content and navigation.
+- css/main.css: CSS variables, shared styles, and reusable components.
+- css/layout.css: CSS Grid page layout, Flexbox components, and responsive
+  mobile-first breakpoints.
+- css/animations.css: entrance animations, transitions, and reduced-motion
+  support.
+- js/theme-switcher.js: theme persistence, project filtering, and contact-form
+  validation.
+- images/: the existing profile and portfolio images.
+- screenshots/: location for screenshots captured for submission.
+
+The page uses BEM-style component, element, and modifier class names. CSS
+custom properties define the shared color palette, spacing-related values,
+shadows, and radii. The dark theme overrides the color tokens rather than
+duplicating component rules.
+
+INTERACTIONS
+
+Theme switcher
+Use the theme button in the header to switch between light and dark palettes.
+The selection is saved in local storage and restored when the page loads.
+
+Project search
+Type in the project search field to filter cards by their text. The result
+count is announced, and an empty-state message appears when there are no
+matches.
+
+Contact form
+The form checks that all fields are filled, the name has at least two
+characters, the email is valid, and the message has at least ten characters.
+Validation feedback appears next to each field. Valid submission opens the
+configured mail application via the form's mailto action; replace the example
+email address in index.html before publishing.
+
+RESPONSIVE AND ACCESSIBLE BEHAVIOR
+
+The layout adapts to tablet and mobile viewports. Navigation and form controls
+remain keyboard accessible, focus is visible, status messages use live
+regions, and animations are reduced when the user requests reduced motion.
